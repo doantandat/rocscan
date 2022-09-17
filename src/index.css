@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #110f1c !important;
+    color: var(--chakra-colors-white) !important;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+html {
+    background-color: #110f1c !important;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.show_nav {
+    display: flex !important;
+    opacity: 1;
+    animation: fade_ 0.3s linear;
+}
+
+@-webkit-keyframes fade_ {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+iframe {
+    display: none;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.frame .frame_header.bg_image_con {
+    font-size: 26px !important;
+}
+
+.frame .frame_item.row .col-6 {
+    font-size: 20px !important;
+}
+
+.page_home .content .item .content_ .frame {
+    height: auto;
+    padding: 20px;
+}
+
+.page_home .content .item .item_btn2 {
+    margin-top: 2.2em;
+}
+
+#Modal_Open .modal_body .row .item_card>div {
+    width: 60%;
+    height: 48%;
+}
+
+#Modal_Open .modal_body .row .item_card .bottom .item_b .text_ {
+    font-size: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+    #Modal_Open .modal_body .row .item_card>div {
+        width: 60%;
+        height: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #Modal_Open .modal_body .row .item_card>div {
+        width: 60%;
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #Modal_Open .modal_body .row .item_card>div {
+        width: 60%;
+        height: 60%;
+    }
+}
+
+.page_home_5 .left .item {
+    /* height: auto; */
+}

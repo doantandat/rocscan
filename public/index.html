@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title> (ROC) Blockchain Explorer </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="Description" content="RocScan allows you to explore and search the  blockchain for transactions, addresses, tokens, prices and other activities taking place on  (ROC)" />
+    <meta name="author" content="RocScan.com" />
+    <meta name="keywords" content=", explorer, ROC, search, blockchain, crypto, currency" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="og:title" content="  (ROC) Blockchain Explorer" />
+    <meta property="og:description" content="RocScan allows you to explore and search the  blockchain for transactions, addresses, tokens, prices and other activities taking place on  (ROC)" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content=" (ROC) Blockchain Explorer" />
+    <meta property="og:url" content="http://RocScan.com/" />
+    <meta property="og:image" content="https://RocScan.com/images/brandassets/RocScan-logo-circle.jpg" />
+    <meta property="og:image:alt" content="Visit RocScan.com" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="  (ROC) Blockchain Explorer" />
+    <meta property="twitter:description" content="RocScan allows you to explore and search the  blockchain for transactions, addresses, tokens, prices and other activities taking place on  (ROC)" />
+    <meta name="twitter:site" content="@RocScan" />
+    <meta property="twitter:image" content="https://RocScan.com/images/brandassets/RocScan-logo-circle.jpg" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46998878-23"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-46998878-23');
+    </script>
+    <script>
+        //Search box text ad
+        //var availableAd = [];
+        //var gotAd = [];
+
+
+        availableAd = ["<a class='ether-search media rounded p-2' target='_blank' href='https://goto.RocScan.com/rd/MKQPFIVSFZSMCQF138IMSHECS' rel='nofollow' title='Links to an External Advertiser site'><div class='mr-2'><img class='u-xs-avatar mr-2' src='/images/gen/aax.jpg' alt='AAX.com'></div><div class='media-body'><h6 class='d-flex align-items-center mb-0'><div class='mr-2'>AAX.com - Sign up to earn 750 USDT</div><span class='d-none d-sm-inline-block bg-white-content small text-secondary rounded-sm border px-1 ml-1'>Sponsored</span><span class='d-inline-block d-sm-none bg-white-content small text-secondary rounded-sm border px-1 ml-1'>Ad</span></h6></div></a>"];
+        gotAd = ["ShowAds					"];
+    </script>
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/vendor/hs-megamenu/src/hs.megamenu.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/vendor/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/theme.min.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/custom.css">
+    <script src="%PUBLIC_URL%/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/jss/blockies.js"></script>
+    <style>
+        .ui-autocomplete {
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: default
+        }
+        
+        .ui-state-active {
+            border-color: #e7eaf3;
+            background: #f8fafd;
+        }
+        
+        body.dark-mode .ui-state-active {
+            background-color: #252525;
+            border-color: #323232;
+        }
+        
+        .autolink-safari a {
+            pointer-events: none !important;
+            text-decoration: none !important;
+            color: inherit !important;
+        }
+    </style>
+    <style type="text/css">
+        #div-advert {
+            line-height: 1.7
+        }
+        
+        @media (max-width: 667px) {
+            #div-advert {
+                min-height: 62px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            #div-advert {
+                padding-bottom: 20px;
+            }
+        }
+    </style>
+    <style>
+        .wrapper {
+            background-color: #fff !important;
+        }
+        
+        .ui-autocomplete {
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!-- <Link rel="stylesheet" href="%PUBLIC_URL%/vendor/css/stylepage6.css" /> -->
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script src="/assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
+    <script src="/assets/vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="/assets/vendor/hs-megamenu/src/hs.megamenu.js"></script>
+    <script src="/assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/assets/vendor/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+    <script src="/assets/js/hs.core.js"></script>
+    <script src="/assets/js/components/hs.header.js"></script>
+    <script src="/assets/js/components/hs.unfold.js"></script>
+    <script src="/assets/js/components/hs.malihu-scrollbar.js"></script>
+    <script src="/assets/js/components/hs.focus-state.js"></script>
+    <script src="/assets/js/components/hs.go-to.js"></script>
+    <script src="/assets/js/components/hs.cubeportfolio.js"></script>
+    <script src="/assets/js/custom/combine-js-bottom2.js"></script>
+    <script>
+        $(window).on('load', function() {
+            // initialization of HSMegaMenu component
+            $('.js-mega-menu').HSMegaMenu({
+                event: 'hover',
+                pageContainer: $('.container'),
+                breakpoint: 767.98,
+                hideTimeOut: 0
+            });
+            myfn_subscribeNewsletter.startFn("#btnSubscribeNewsletter", "#signupSrEmail")
+        });
+
+        $(document).on('ready', function() {
+            // initialization of header
+            $.HSCore.components.HSHeader.init($('#header'));
+
+            // initialization of unfold component
+            $.HSCore.components.HSUnfold.init($('[data-unfold-target]'), {
+                afterOpen: function() {
+                    $(this).find('input[type="search"]').focus();
+                }
+            });
+
+            // initialization of malihu scrollbar
+            $.HSCore.components.HSMalihuScrollBar.init($('.js-scrollbar'));
+
+            // initialization of focus state
+            $.HSCore.components.HSFocusState.init();
+
+            // initialization of go to
+            $.HSCore.components.HSGoTo.init('.js-go-to');
+
+            // initialization of cubeportfolio
+            //$.HSCore.components.HSCubeportfolio.init('.cbp');
+        });
+    </script>
+    <script type="text/javascript">
+        var sid = 'cc67c2d12741821913f037b323c79961';
+        var strGlobal = sessionStorage.getItem("ShowAs");
+        var strGlobalFee = sessionStorage.getItem("ShowFee");
+        var cookieconsent = getCookie("RocScan_cookieconsent");
+        if (cookieconsent !== "True") {
+            document.getElementById("divcookie").style.display = "block";
+        };
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) === 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        $("#btnCookie").click(function() {
+            $("#divcookie").fadeOut("slow", function() {
+                var d = new Date();
+                d.setTime(d.getTime() + (1095 * 24 * 60 * 60 * 1000));
+                var expires = "expires=" + d.toUTCString();
+                document.cookie = "RocScan_cookieconsent=True" + ";" + expires + ";path=/";;
+            });
+        });
+
+        function handleSearchText(data) {
+            searchAddress = false;
+            if ($("txtSearchInput").val() == "") {
+                $("#hdnSearchText").val("");
+            }
+        }
+    </script>
+    <script src="/assets/js/custom/web3-utils.min.js"></script>
+    <script src="/assets/js/custom/web3-eth.min.js"></script>
+    <script src="/assets/js/custom/web3-providers-http.min.js"></script>
+    <script type="text/javascript">
+        var eth;
+        var isTestnet = 'false';
+
+        async function addNetwork(type) {
+
+            if (type === 'web3') {
+                if (typeof ethereum !== 'undefined') {
+                    eth = new Web3Eth(ethereum);
+                } else if (typeof web3 !== 'undefined') {
+                    eth = new Web3Eth(web3.givenProvider);
+                } else {
+                    eth = new Web3Eth(ethereum);
+                }
+            }
+
+            if (typeof eth !== 'undefined') {
+                var network = 0;
+                network = await eth.net.getId();
+                netID = network.toString();
+                var params;
+                if (isTestnet == "false") {
+                    if (netID == "56") {
+                        alert("BSC Network has already been added to Metamask.");
+                        return;
+                    } else {
+                        params = [{
+                            chainId: '0x38',
+                            chainName: 'ROC Smart Chain Mainnet',
+                            nativeCurrency: {
+                                name: 'ROC',
+                                symbol: 'ROC',
+                                decimals: 18
+                            },
+                            rpcUrls: ['https://bsc-dataseed1..org/'],
+                            blockExplorerUrls: ['https://RocScan.com/']
+                        }]
+                    }
+                } else {
+                    if (netID == "97") {
+                        alert("BSC Test Network has already been added to Metamask.");
+                        return;
+                    } else {
+                        params = [{
+                            chainId: '0x61',
+                            chainName: 'ROC Smart Chain Testnet',
+                            nativeCurrency: {
+                                name: 'tROC',
+                                symbol: 'tROC',
+                                decimals: 18
+                            },
+                            rpcUrls: ['https://data-seed-prebsc-1-s1..org:8545/'],
+                            blockExplorerUrls: ['https://testnet.RocScan.com/']
+                        }]
+                    }
+                }
+
+                window.ethereum.request({
+                        method: 'wallet_addEthereumChain',
+                        params
+                    })
+                    .then(() => console.log('Success'))
+                    .catch((error) => console.log("Error", error.message));
+            } else {
+                alert('Unable to locate a compatible web3 browser!');
+            }
+        }
+    </script>
+    <script src="/assets/highcharts/js/v6/highcharts.js"></script>
+    <script>
+        var lang_miner = "Validator";
+        var lang_mined_by = "Validated by";
+        var lang_block = "Block";
+        var lang_block_reward = "Block Reward";
+        var lang_sec = "sec";
+        var lang_secs = "secs";
+        var lang_min = "min";
+        var lang_mins = "mins";
+        var lang_from = "From";
+        var lang_to = "To";
+        var lang_amount = "Amount";
+        var lang_tx = "Tx";
+        var lang_bk = "Bk";
+        var lang_ether = "ROC";
+        var lang_txns = "txns";
+        var lang_in_X = "in";
+        var lang_ago = "ago";
+        var lang_secs_ago = "secs ago";
+        var lang_sec_ago = "sec ago";
+        var lang_sec_in = "";
+    </script>
+    <script type="text/javascript">
+        $(function() {
+            $('#container-1').highcharts({
+                chart: {
+                    spacingTop: 10,
+                    spacingBottom: 0,
+                    spacingLeft: 0,
+                    spacingRight: 10,
+                },
+
+                title: {
+                    text: '',
+                    align: 'left',
+                },
+
+                xAxis: {
+                    title: {
+                        text: ''
+                    },
+                    lineWidth: 0,
+                    minorTickLength: 0,
+                    tickLength: 0,
+                    labels: {
+                        step: 7,
+                    },
+                    categories: [
+                        'Aug 11', 'Aug 12', 'Aug 13', 'Aug 14', 'Aug 15', 'Aug 16', 'Aug 17', 'Aug 18', 'Aug 19', 'Aug 20', 'Aug 21', 'Aug 22', 'Aug 23', 'Aug 24', 'Aug 25',
+                    ]
+                },
+
+                yAxis: {
+                    labels: {
+                        enabled: true
+                    },
+                    gridLineWidth: 0,
+                    title: {
+                        text: null
+                    }
+                },
+
+                legend: {
+                    enabled: false
+                },
+
+                credits: {
+                    enabled: false
+                },
+
+                tooltip: {
+                    formatter: function() {
+                        return '<span style="font-size:10px">' + this.point.friendlydate + '</span><br><table><tr><td style="padding:0">' +
+                            '<span style="color:' + this.series.color + '">Transactions: </a></span><b>' + this.point.formattedValue + '</b><br>' +
+
+                            '</td></tr></table>';
+                    }
+                },
+
+                plotOptions: {
+                    series: {
+                        color: '#1e2022',
+                        enableMouseTracking: true,
+                        lineWidth: 1,
+                        shadow: false,
+                        animation: false,
+                        cursor: 'pointer',
+                        states: {
+                            hover: {
+                                lineWidth: 1
+                            }
+                        },
+                        marker: {
+                            radius: 0
+                        },
+                        point: {
+                            events: {
+                                select: function(e) {
+                                    location.href = 'txs?dt=' + this.options.dt;
+                                }
+                            }
+                        }
+                    },
+                    column: {
+                        pointPadding: 0.1,
+                        borderWidth: 0
+                    }
+                },
+
+                series: [{
+                    name: 'Transactions',
+                    type: 'spline',
+                    data: [{
+                        y: 3636719,
+                        dt: '1660176000',
+                        formattedValue: '3,636,719',
+                        friendlydate: 'Thursday, August 11, 2022',
+                        price: '$323.90'
+                    }, {
+                        y: 3176499,
+                        dt: '1660262400',
+                        formattedValue: '3,176,499',
+                        friendlydate: 'Friday, August 12, 2022',
+                        price: '$328.24'
+                    }, {
+                        y: 3334290,
+                        dt: '1660348800',
+                        formattedValue: '3,334,290',
+                        friendlydate: 'Saturday, August 13, 2022',
+                        price: '$324.29'
+                    }, {
+                        y: 3010707,
+                        dt: '1660435200',
+                        formattedValue: '3,010,707',
+                        friendlydate: 'Sunday, August 14, 2022',
+                        price: '$317.75'
+                    }, {
+                        y: 3405182,
+                        dt: '1660521600',
+                        formattedValue: '3,405,182',
+                        friendlydate: 'Monday, August 15, 2022',
+                        price: '$319.58'
+                    }, {
+                        y: 3223673,
+                        dt: '1660608000',
+                        formattedValue: '3,223,673',
+                        friendlydate: 'Tuesday, August 16, 2022',
+                        price: '$316.17'
+                    }, {
+                        y: 3129544,
+                        dt: '1660694400',
+                        formattedValue: '3,129,544',
+                        friendlydate: 'Wednesday, August 17, 2022',
+                        price: '$306.88'
+                    }, {
+                        y: 3190050,
+                        dt: '1660780800',
+                        formattedValue: '3,190,050',
+                        friendlydate: 'Thursday, August 18, 2022',
+                        price: '$298.11'
+                    }, {
+                        y: 3432116,
+                        dt: '1660867200',
+                        formattedValue: '3,432,116',
+                        friendlydate: 'Friday, August 19, 2022',
+                        price: '$279.11'
+                    }, {
+                        y: 2790139,
+                        dt: '1660953600',
+                        formattedValue: '2,790,139',
+                        friendlydate: 'Saturday, August 20, 2022',
+                        price: '$283.64'
+                    }, {
+                        y: 2595440,
+                        dt: '1661040000',
+                        formattedValue: '2,595,440',
+                        friendlydate: 'Sunday, August 21, 2022',
+                        price: '$301.88'
+                    }, {
+                        y: 2940614,
+                        dt: '1661126400',
+                        formattedValue: '2,940,614',
+                        friendlydate: 'Monday, August 22, 2022',
+                        price: '$299.91'
+                    }, {
+                        y: 2883122,
+                        dt: '1661212800',
+                        formattedValue: '2,883,122',
+                        friendlydate: 'Tuesday, August 23, 2022',
+                        price: '$299.15'
+                    }, {
+                        y: 2801702,
+                        dt: '1661299200',
+                        formattedValue: '2,801,702',
+                        friendlydate: 'Wednesday, August 24, 2022',
+                        price: '$296.34'
+                    }, {
+                        y: 2983331,
+                        dt: '1661385600',
+                        formattedValue: '2,983,331',
+                        friendlydate: 'Thursday, August 25, 2022',
+                        price: '$301.46'
+                    }, ],
+                    allowPointSelect: true,
+                    pointStart: 0
+                }]
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        //function setFocus() {
+        //    if (window.innerWidth > 600)
+        //        $("input[name=q]").focus();
+        //}
+        //$(document).ready(function () {
+        //    setFocus();
+        //});
+    </script>
+    <script>
+        (function() {
+            var js = "window['__CF$cv$params']={r:'741230029d676e45',m:'u9PkSCmmvs8jgMQhhBiT53OyF1WTvI8Z2xf_hqro6n0-1661575839-0-AdWgiN5+CGtQ9/lEUpbZ1uIVWcM4MqptSLiZjheHgStAP96uiO9uTrdllRjxoUyIDapG/KjWlBvViTMyGBG+h9V4eDb95hjH9iM9vPUWfIigtHHtQ4yP7e4i6hFNbHHxqw==',s:[0xa5e0ec6fc8,0x712e725c4a],u:'/cdn-cgi/challenge-platform/h/b'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/h/b/scripts/alpha/invisible.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";
+            var _0xh = document.createElement('iframe');
+            _0xh.height = 1;
+            _0xh.width = 1;
+            _0xh.style.position = 'absolute';
+            _0xh.style.top = 0;
+            _0xh.style.left = 0;
+            _0xh.style.border = 'none';
+            _0xh.style.visibility = 'hidden';
+            document.body.appendChild(_0xh);
+
+            function handler() {
+                var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;
+                if (_0xi) {
+                    var _0xj = _0xi.createElement('script');
+                    _0xj.nonce = '';
+                    _0xj.innerHTML = js;
+                    _0xi.getElementsByTagName('head')[0].appendChild(_0xj);
+                }
+            }
+            if (document.readyState !== 'loading') {
+                handler();
+            } else if (window.addEventListener) {
+                document.addEventListener('DOMContentLoaded', handler);
+            } else {
+                var prev = document.onreadystatechange || function() {};
+                document.onreadystatechange = function(e) {
+                    prev(e);
+                    if (document.readyState !== 'loading') {
+                        document.onreadystatechange = prev;
+                        handler();
+                    }
+                };
+            }
+        })();
+    </script>
+</body>
+
+</html>
